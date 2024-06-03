@@ -12,5 +12,11 @@ fi
 # Download the ZIP file
 wget "$download_url"
 
+unzip demo-big.zip
+
+patch -u ./demo-big-20170815.sql ./fix_drop.patch
+
+rm ./demo-big.zip
+
 # Print success message
-echo "Downloaded demo-big.zip to your current directory."
+echo "Done"
